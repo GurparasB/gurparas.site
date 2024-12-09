@@ -1,0 +1,104 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+.mode-selection button {
+    margin-right: 10px;
+    padding: 10px 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #333;
+    cursor: pointer;
+    position: relative; /* Ensures pseudo-elements are positioned relative to the cell */
+}
+
+.board .cell.x::before {
+    content: 'X';
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.board .cell.circle::before {
+    content: 'O';
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.game-info {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.scoreboard {
+    display: none; /* Hide all scoreboards initially */
+    margin: 10px;
+    font-size: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}

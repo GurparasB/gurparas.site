@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles_tic.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="mode-selection">
+            <button id="singlePlayer">Single Player</button>
+            <button id="twoPlayer">Two Player</button>
+        </div>
+        <div class="scoreboard" id="twoPlayerScoreboard">
+            <div id="playerOneScore"></div> 
+             <div id="playerTwoScore"></div>
+        </div>
+        <div class="scoreboard" id="singlePlayerScoreboard" style="display: none;">
+            <div id="singlePlayerOneScore"></div>
+            <div id="machineScore"></div>
+        </div>
+        
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div class="game-info" id="game-info">
+            <button id="restartButton">Restart Game</button>
+        </div>
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content">
+                <p id="winnerMessage"></p>
+                <button id="playAgain">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script_tic.js"></script>
+</body>
+</html>
+

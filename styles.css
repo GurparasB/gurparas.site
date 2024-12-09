@@ -1,0 +1,36 @@
+body {
+    background-color: #ADD8E6;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#gameCanvas {
+    background-color: #FFFFFF;
+    border: 5px solid #000000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 600px) {
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3; /* Maintain the aspect ratio of 4:3 for smaller screens */
+    }
+}
+
+/* Define teleportation animation */
+@keyframes teleport {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
